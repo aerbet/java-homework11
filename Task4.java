@@ -10,14 +10,15 @@ public class Task4 {
 
         System.out.print("Введите скорость в м/сек: ");
         double mSec = sc.nextDouble();
+        double mSecInKm = mSec * 3.6;
 
         String tmpl = "\n%s %s больше чем %s %s\n";
 
-        if (mSec * 3.6 < kmHour) {
+        if (mSecInKm < kmHour) {
             System.out.printf(tmpl, kmHour, "км/ч", mSec, "м/сек");
-        } else if (mSec * 3.6 > kmHour) {
+        } else if (mSecInKm > kmHour) {
             System.out.printf(tmpl, mSec, "м/сек", kmHour, "км/ч");
-        } else if (mSec * 3.6 == kmHour) {
+        } else {
             tmpl = "\nСкорости равны\n";
             System.out.println(tmpl);
         } 
